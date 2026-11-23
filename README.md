@@ -16,7 +16,7 @@ Se predice el nivel del río Cauca en la estación **La Virginia – AUT. (26177
 | 2 | Procesamiento de 275 escenas Sentinel-1; el radar frente a la serie sola a +12/+24/+36/+48 h con validación por bloques y controles; Ramas A (CNN preentrenadas + Grad-CAM), B (RNN/LSTM/GRU) y C (fusión tardía) | mismo cuaderno (secciones 2.x) |
 | 3 | Pipelines PyTorch/TensorFlow, aumento y Mixup, GPU con precisión mixta, ONNX, cuantización INT8, modelo Keras, ruta de despliegue | `notebooks/Centinela_Fase3_FINAL.ipynb` |
 
-## Resultados principales (resumen honesto)
+## Resultados principales
 
 - **+24 h y +36 h:** con validación por bloques (136 escenas de prueba) el modelo con radar baja el error medio de 13,70 a 11,54 cm (+24 h) y de 21,02 a 17,78 cm (+36 h), gana en 5 de 5 bloques y supera a los controles (radar barajado, reloj, órbita). A +12 h no hay efecto y a +48 h es inconcluso. El horizonte +24 h se fijó *después* de explorar otros horizontes.
 - Las redes recurrentes **no superan** a la persistencia; las CNN sobre imágenes solas no superan las referencias; la fusión tardía es **no concluyente** (40 escenas de prueba).
